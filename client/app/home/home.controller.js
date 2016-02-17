@@ -6,8 +6,6 @@ class HomeController {
 
   }
 
-}
-
 angular.module('trackerTestApp')
   .controller('HomeController', HomeController);
 
