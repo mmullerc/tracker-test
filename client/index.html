@@ -28,7 +28,10 @@
 
     <!-- Add your site or application content here -->
     <navbar></navbar>
-    <div ui-view=""></div>
+    <section class="container">
+      <div ui-view=""></div>
+    </section>
+    
     <footer></footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -63,6 +66,8 @@
       <!-- injector:js -->
       <script src="components/util/util.module.js"></script>
       <script src="app/app.constant.js"></script>
+      <script src="app/careers/careers.controller.js"></script>
+      <script src="app/careers/careers.route.js"></script>
       <script src="app/main/main.controller.js"></script>
       <script src="app/main/main.js"></script>
       <script src="components/footer/footer.directive.js"></script>
