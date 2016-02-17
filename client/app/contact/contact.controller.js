@@ -1,8 +1,10 @@
 (function () {
   app.module('trackerTestApp')
-    .controller('contactCtrl', contactCtrl);
+    .controller('ContactCtrl', ContactCtrl);
 
-    function contactCtrl() {
-      
+    function ContactCtrl() {
+      var vm = this;
+      vm.DoSomething = 'Don\'t scream';
+      console.log(vm.DoSomething);
     }
-})
+})();

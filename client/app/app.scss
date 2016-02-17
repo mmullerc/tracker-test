@@ -6,7 +6,14 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 /**
  * App-wide Styles
  */
-
+body{
+	font-size: 16px;
+	font-family: 'futura', sans-serif;
+}
+@font-face{
+	font-family: 'futura';
+	src: url(../assets/fonts/futura-book.ttf);
+}
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -17,6 +24,8 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 // Component styles are injected through grunt
 // injector
 @import 'main/main';
+@import 'main/variables';
 @import '../components/footer/footer';
 @import '../components/modal/modal';
+@import '../components/navbar/navbar';
 // endinjector

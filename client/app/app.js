@@ -10,7 +10,6 @@ angular.module('trackerTestApp', [
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
-      .state('/')
       .otherwise('/');
 
     $locationProvider.html5Mode(true);
