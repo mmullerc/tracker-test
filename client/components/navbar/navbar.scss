@@ -1,0 +1,28 @@
+.navbar{
+	background-color: $primary-color;
+	border: none;
+	
+	.navbar-default .navbar-nav > .active > a{
+		background-color: transparent;
+	}
+	.navbar-default .navbar-nav > li > a:hover{
+		color: $secondary-color;
+	}
+	.navbar-brand{
+		padding: 20px 15px;
+		transition: all 1.3s ease .1s;
+		
+		&:hover{
+			transform: rotate(360deg);
+		}
+	}
+}
+.navbar-default .navbar-nav > li > a{
+	cursor: pointer;
+	color: white;
+	padding: 2.1em 1em;
+	font-size: 1.1em;
+	&:hover{
+		color: $secondary-color;
+	}
+}
