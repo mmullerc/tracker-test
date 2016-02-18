@@ -23,6 +23,7 @@ body{
 
 // Component styles are injected through grunt
 // injector
+@import 'home/home';
 @import 'main/main';
 @import 'main/variables';
 @import '../components/footer/footer';
