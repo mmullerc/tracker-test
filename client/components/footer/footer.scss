@@ -3,7 +3,12 @@
   color: white;
   background-color: $primary-color;
   font-size: 1em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 
+  
   p{
   	cursor: pointer;
   }
