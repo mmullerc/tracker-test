@@ -1,11 +1,11 @@
-'use strict';
-angular.module('trackerTestApp')
-  .config(function($stateProvider) {
-    $stateProvider
-      .state('main', {
-        url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      });
-  });
+// 'use strict';
+// angular.module('trackerTestApp')
+//   .config(function($stateProvider) {
+//     $stateProvider
+//       .state('main', {
+//         url: '/',
+//         templateUrl: 'app/main/main.html',
+//         controller: 'MainController',
+//         controllerAs: 'main'
+//       });
+//   });
