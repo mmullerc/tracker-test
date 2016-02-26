@@ -10,7 +10,7 @@ function NavbarController(clickService, $state) {
                 {'id': '5','title': 'ABOUT','state': 'about', 'content': 'Navbar About'}];
 
 
-  vmNav.logo = {'id':'1','url': $state.current.name, 'src':'../assets/images/logo.png', 'content': 'Logo'};//Logo
+  vmNav.logo = {'id':'1', 'src':'../assets/images/logo.png', 'content': 'Logo'};//Logo
   
   vmNav.register = function(p) {
    var state = '/' + $state.current.name;
