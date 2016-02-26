@@ -7,7 +7,8 @@ function NavbarController(clickService, $state) {
   vmNav.menu = [{'id': '2','title': 'HOME','state': 'home', 'content': 'Navbar Home'}, 
                 {'id': '3','title': 'CONTACT','state': 'contact', 'content': 'Navbar Contact'}, 
                 {'id': '4','title': 'CAREERS','state': 'careers', 'content': 'Navbar Careers'}, 
-                {'id': '5','title': 'ABOUT','state': 'about', 'content': 'Navbar About'}];
+                {'id': '5','title': 'ABOUT','state': 'about', 'content': 'Navbar About'},
+                {'id': '6','title': 'RESULTS','state': 'results', 'content': 'Navbar Results'}];
 
 
   vmNav.logo = {'id':'1', 'src':'../assets/images/logo.png', 'content': 'Logo'};//Logo
