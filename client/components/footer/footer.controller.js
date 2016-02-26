@@ -12,7 +12,7 @@ function FooterController(clickService, $state) {
 
   footer.trackData = function(){
 
-    var psection = {'id':'1001','url':$state.current.name,'src':'footer','content':footer.text};
+    var psection = {'id':'footer1','url':$state.current.name,'src':'footer','content':footer.text};
 
     clickService.addClick(psection);
   };
