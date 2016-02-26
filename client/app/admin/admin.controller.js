@@ -6,9 +6,9 @@ class AdminCtrl {
 
   constructor(clickService) {
     var vm = this;
-    vm.message = 'Hello';
+    vm.label = 'HOME';
     vm.labelsLeft = ['HOME', 'CONTACT', 'CAREERS', 'ABOUT'];
-    vm.dataLeft = [100, 150, 200, 250];
+    
 
     let home = {};
     let contact = {};
@@ -29,17 +29,26 @@ class AdminCtrl {
           home.counts
         ];
 
+        sumAll(home.counts , contact.counts , careers.counts , about.counts);     
+
       })
       .error(function(err) {
         console.log(err);
       });
 
     
-
+      function sumAll(...arr) {
+        vm.dataLeft = [];
+        for (var i = 0; i < arr.length ; i++) {
+          let sum = 0;
+          arr[i].map(n => {sum = sum + n});
+          vm.dataLeft[i] = sum;
+        }
+      }
     
 
     vm.chartClick = function (chart) {
-
+      vm.label = chart[0].label;
       if(chart[0].label == 'HOME'){
         if(home.ids.length != 0) {
           vm.labelsRight = home.ids;
@@ -68,7 +77,7 @@ class AdminCtrl {
           vm.seriesRight = ['Series A'];
 
           vm.dataRight = [
-            careers.count
+            careers.counts
           ];
         }
         
@@ -146,14 +155,14 @@ class AdminCtrl {
         if(data[i].url == '/careers'){
           careers.push(data[i]);
         }
-      }
+      }      
       for(let i=0; i<careers.length; i++){
         careersIds.push(careers[i].id);
       }
       for(let i=0; i<careers.length; i++){
         careersCount.push(careers[i].count);
       }
-
+      
       return {
         ids: careersIds,
         counts: careersCount
