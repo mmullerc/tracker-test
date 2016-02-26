@@ -16,6 +16,14 @@
 			transform: rotate(360deg);
 		}
 	}
+	.navbar-header{
+		@media (max-width: 770px){
+			height: 5.2em;
+    	}
+	}
+	.navbar-toggle{
+		margin-top: 1.5em;
+	}
 }
 .navbar-default .navbar-nav > li > a{
 	cursor: pointer;

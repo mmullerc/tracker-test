@@ -1,12 +1,11 @@
 'use strict';
 
 angular.module('trackerTestApp')
-  .directive('footer', function() {
-    return {
-      templateUrl: 'components/footer/footer.html',
-      restrict: 'E',
-      link: function(scope, element) {
-        element.addClass('footer');
-      }
-    };
-  });
+  .directive('footer', () => ({
+
+    templateUrl: 'components/footer/footer.html',
+    restrict: 'E',
+    controller: 'FooterController',
+    controllerAs: 'footer'
+
+  }));
