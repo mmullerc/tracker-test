@@ -6,7 +6,8 @@ angular.module('trackerTestApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'chart.js'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
