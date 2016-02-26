@@ -5,5 +5,5 @@ angular.module('trackerTestApp')
     templateUrl: 'components/navbar/navbar.html',
     restrict: 'E',
     controller: 'NavbarController',
-    controllerAs: 'nav'
+    controllerAs: 'vmNav'
   }));

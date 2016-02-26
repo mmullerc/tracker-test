@@ -1,17 +1,24 @@
 'use strict';
 
-class NavbarController {
-  //start-non-standard
-  menu = [{'title': 'HOME','state': 'home'}, 
-          {'title': 'CONTACT','state': 'contact'}, 
-          {'title': 'CAREERS','state': 'careers'}, 
-          {'title': 'ABOUT','state': 'about'}];
+function NavbarController(clickService, $state) {
+  var vmNav = this;
+  var isCollapsed = true;
 
-  isCollapsed = true;
-  //end-non-standard
+  vmNav.menu = [{'id': 'nav1','title': 'HOME','state': 'home', 'content': 'Navbar Home'}, 
+                {'id': 'nav2','title': 'CONTACT','state': 'contact', 'content': 'Navbar Contact'}, 
+                {'id': 'nav3','title': 'CAREERS','state': 'careers', 'content': 'Navbar Careers'}, 
+                {'id': 'nav4','title': 'ABOUT','state': 'about', 'content': 'Navbar About'},
+                {'id': 'nav5','title': 'RESULTS','state': 'results', 'content': 'Navbar Results'}];
 
-  constructor() {
-    }
+
+  vmNav.logo = {'id':'nav6', 'element': 'Logo'};//Logo
+  
+  vmNav.register = function(p) {
+   var state = '/' + $state.current.name;
+
+   p.url = state;
+   clickService.addClick(p);
+  };
 }
 
 angular.module('trackerTestApp')

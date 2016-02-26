@@ -1,3 +1,4 @@
+'use strict'
 //Click service
 ;(function() {
   angular
@@ -5,11 +6,9 @@
     .service('clickService',clickService);
     function clickService($http){
       var addClick = function(psection){
-        console.log(psection.id);
-        console.log(psection.content);
-        console.log(psection.url);
-        //return $http.post('http://localhost:3000/api/click/',psection);
-      }
+        console.log(psection);
+        return $http.post('/tracker', psection);
+      };
       var public_api = {
         addClick : addClick
       };
