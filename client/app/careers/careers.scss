@@ -1,0 +1,14 @@
+ul.careers {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 6em;
+	li {
+		border-top: 1px solid  $primary-color;
+		padding: 0 2rem;
+		margin: 3rem 0;
+	}
+	h2 {
+		font-size: 24px;
+		color:  $primary-color;
+	}
+}

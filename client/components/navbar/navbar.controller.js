@@ -2,7 +2,7 @@
 
 class NavbarController {
   //start-non-standard
-  menu = [{'title': 'HOME','state': 'main'}, 
+  menu = [{'title': 'HOME','state': 'home'}, 
           {'title': 'CONTACT','state': 'contact'}, 
           {'title': 'CAREERS','state': 'careers'}, 
           {'title': 'ABOUT','state': 'about'}];

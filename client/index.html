@@ -28,7 +28,10 @@
 
     <!-- Add your site or application content here -->
     <navbar></navbar>
-    <div ui-view=""></div>
+    <section class="container">
+      <div ui-view=""></div>
+    </section>
+    
     <footer></footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -62,15 +65,22 @@
       <script src="app/app.js"></script>
       <!-- injector:js -->
       <script src="components/util/util.module.js"></script>
+      <script src="app/about/about.controller.js"></script>
+      <script src="app/about/about.js"></script>
       <script src="app/app.constant.js"></script>
+      <script src="app/careers/careers.controller.js"></script>
+      <script src="app/careers/careers.route.js"></script>
       <script src="app/contact/contact.controller.js"></script>
       <script src="app/contact/contact.route.js"></script>
+      <script src="app/home/home.controller.js"></script>
+      <script src="app/home/home.js"></script>
       <script src="app/main/main.controller.js"></script>
       <script src="app/main/main.js"></script>
       <script src="components/footer/footer.directive.js"></script>
       <script src="components/modal/modal.service.js"></script>
       <script src="components/navbar/navbar.controller.js"></script>
       <script src="components/navbar/navbar.directive.js"></script>
+      <script src="components/services/request_click.service.js"></script>
       <script src="components/util/util.service.js"></script>
       <!-- endinjector -->
     <!-- endbuild -->
