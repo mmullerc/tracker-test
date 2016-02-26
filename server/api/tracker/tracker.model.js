@@ -3,10 +3,10 @@
 var mongoose = require('bluebird').promisifyAll(require('mongoose'));
 
 var TrackerSchema = new mongoose.Schema({
-    id: Number,
-    count : Number, 
+    id: String,
     url: String, 
-    content: String
+    element: String,
+    count : Number
 });
 
 export default mongoose.model('Tracker', TrackerSchema);

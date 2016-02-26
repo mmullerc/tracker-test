@@ -33,6 +33,7 @@ module.exports.create = function (req, res) {
 
   Tracker.findOne({ id: req.body.id }, function (err, doc){
     if (!doc) {
+      req.body.count = 1;
       Tracker.createAsync(req.body)
       .then(respondWithResult(res, 201))
       .catch(handleError(res));
@@ -41,6 +42,16 @@ module.exports.create = function (req, res) {
       doc.save();
     }
   })
+}
+
+// Get All Tracker in the DB
+module.exports.getAll = function (req, res) {
+
+  Tracker.find().then(function(resp) {
+     res.send(resp);
+   }).catch(function(err){
+     errorHandler(err);
+   })
 }
 
 /*

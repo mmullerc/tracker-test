@@ -5,18 +5,73 @@
 class AdminCtrl {
 
   constructor() {
-    this.message = 'Hello';
-    this.labelsLeft = ['HOME', 'CONTACT', 'CAREERS', 'ABOUT'];
-    this.dataLeft = [100, 150, 200, 250];
+    var vm = this;
+    vm.message = 'Hello';
+    vm.labelsLeft = ['HOME', 'CONTACT', 'CAREERS', 'ABOUT'];
+    vm.dataLeft = [100, 150, 200, 250];
 
-    this.labelsRight = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-    this.seriesRight = ['Series A', 'Series B'];
+    var myMap = new Map();
+    var keyString = "a string",
+        keyObj = {};
 
-    this.dataRight = [
-      [65, 59, 80, 81, 56, 55, 40],
-      [28, 48, 40, 19, 86, 27, 90]
+    // setting the values
+    myMap.set(keyString, 'HOME');
+    myMap.set(keyObj, {label: ['Title', 'Paragraph', 'Image'],
+                      series: ['Series A'],
+                      data: [[100, 90, 80]]});
+
+    console.log('map: '+myMap.get(keyObj));
+
+    vm.labelsRight = ['Title', 'Paragraph', 'Image'];
+    vm.seriesRight = ['Series A'];
+
+    vm.dataRight = [
+      [100, 90, 80]
     ];
 
+    vm.chartClick = function (chart) {
+
+      if(chart[0].label == 'HOME'){
+        vm.labelsRight = ['Title', 'Paragraph', 'Image'];
+        vm.seriesRight = ['Series A'];
+
+        vm.dataRight = [
+          [100, 90, 80]
+        ];
+      }
+
+      if(chart[0].label == 'CONTACT'){
+        vm.labelsRight = ['Title', 'Paragraph', 'Image'];
+        vm.seriesRight = ['Series A'];
+
+        vm.dataRight = [
+          [80, 95, 65]
+        ];
+      }
+
+      if(chart[0].label == 'CAREERS'){
+        vm.labelsRight = ['Title', 'Paragraph', 'Image'];
+        vm.seriesRight = ['Series A'];
+
+        vm.dataRight = [
+          [23, 42, 11]
+        ];
+      }
+
+      if(chart[0].label == 'ABOUT'){
+        vm.labelsRight = ['Title', 'Paragraph', 'Image'];
+        vm.seriesRight = ['Series A'];
+
+        vm.dataRight = [
+          [73, 54, 62]
+        ];
+      }
+
+    };
+
+    vm.click = function () {
+      console.log(vm.dataRight);
+    }
   }
 }
 
