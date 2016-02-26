@@ -1,36 +1,36 @@
-<div class="container">
+<div class="container" id="contact">
   <div class="row">
     <div class="col-md-6">
-      <h1>Contact us</h1>
-      <img src="assets/images/flowers.png" alt="Flores">
+      <h1 ng-click="contact.register(contact.title)">{{contact.title.src}}</h1>
+      <img ng-click="contact.register(contact.img)" alt="Flores" src={{contact.img.src}}>
       <div class="social">
-        <i class="fa fa-facebook contact"></i>
-        <i class="fa fa-twitter contact"></i>
-        <i class="fa fa-linkedin contact"></i>
+        <i class="fa fa-facebook contact" ng-click="contact.register(contact.facebook)"></i>
+        <i class="fa fa-twitter contact" ng-click="contact.register(contact.twitter)"></i>
+        <i class="fa fa-linkedin contact" ng-click="contact.register(contact.linkedin)"></i>
       </div>
     </div>
     <div class="col-md-6">
-      <form class="form contact" action="">
+      <form class="form contact" action="" ng-click="contact.register(contact.sendButton)">
         <div class="form-group">
-          <label for="">Name</label>
+          <label for="">NAME</label>
           <input class="form-control" type="text" placeholder="Martita">
         </div>
         <div class="form-group">
-          <label for="">Last name</label>
+          <label for="">LAST NAME</label>
           <input class="form-control" type="text" placeholder="Fabregas">
         </div>
         <div class="form-group">
-          <label for="">Email</label>
+          <label for="">EMAIL</label>
           <input class="form-control" type="text" placeholder="marregas@jdjskd.com">
         </div>
         <div class="form-group">
-          <label for="">Your message</label>
+          <label for="">YOUR MESSAGE</label>
           <textarea class="form-control" type="text">
 
           </textarea>
         </div>
         <div class="form-group">
-          <input type="button" class="btn btn-default btn-block" value="Don't click here">
+          <input type="button" class="btn btn-default btn-block" value="SEND MESSAGE" ng-click="contact.register(contact.sendButton)">
         </div>
       </form>
     </div>
