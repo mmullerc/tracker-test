@@ -14,6 +14,8 @@ export default function(app) {
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')
    .get(errors[404]);
 
+
+
     app.route('/tracker')
     .post((req, res) => {
         var trackers = trackerController.create(req, res);
@@ -23,4 +25,9 @@ export default function(app) {
     .get((req, res) => {
         var all = trackerController.getAll(req, res);
     });
+
+    app.route('/*')
+      .get((req, res) => {
+        res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
+      });
 }
