@@ -6,6 +6,7 @@
 
 import errors from './components/errors';
 import path from 'path';
+var trackerController = require('./api/tracker/tracker.controller');
 
 export default function(app) {
   // Insert routes below
@@ -17,5 +18,10 @@ export default function(app) {
   app.route('/*')
     .get((req, res) => {
       res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
+    });
+
+    app.route('/tracker')
+    .post((req, res) => {
+        var trackers = trackerController.create(req, res);
     });
 }
