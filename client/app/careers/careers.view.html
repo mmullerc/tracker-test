@@ -1,7 +1,7 @@
-<h1>CAREERS</h1>
+<h1 ng-click="careers.register(careers.title)">{{careers.title.title}}</h1>
 <ul class="careers">
-	<li ng-repeat="item in careers.careerList">
+	<li ng-repeat="item in careers.careerList" ng-click="careers.register(item)">
 		<h2>{{item.title}}</h2>
-		<p>{{item.desc}}</p>
+		<p>{{item.content}}</p>
 	</li>
 </ul>
