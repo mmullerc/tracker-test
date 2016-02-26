@@ -31,8 +31,8 @@ class CareersCtrl {
     ];
 
     this.register = function(p) {
-     clickService.addClick(p);
-   }
+      clickService.addClick(p);
+    }
 
   }
 }
