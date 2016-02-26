@@ -1,12 +1,18 @@
-<div class="container">
+<div class="container admin">
   <div class="row">
     <div class="col-md-6">
-      <canvas id="doughnut" class="chart chart-doughnut"
-        chart-data="admin.data" chart-labels="admin.labels">
-      </canvas> 
+      <div>
+        <canvas id="doughnut" class="chart chart-doughnut"
+          chart-data="admin.dataLeft" chart-labels="admin.labelsLeft">
+        </canvas> 
+      </div>      
     </div>
     <div class="col-md-6">
-      
+      <div>
+        <canvas id="bar" class="chart chart-bar"
+          chart-data="admin.dataRight" chart-labels="admin.labelsRight"> chart-series="admin.seriesRight"
+        </canvas>
+      </div>      
     </div>
   </div>
 </div>

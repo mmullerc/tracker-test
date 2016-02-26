@@ -1,3 +1,4 @@
+'use strict'
 //Click service
 ;(function() {
   angular

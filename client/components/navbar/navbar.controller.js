@@ -18,7 +18,7 @@ function NavbarController(clickService, $state) {
 
    p.url = state;
    clickService.addClick(p);
-  }
+  };
 }
 
 angular.module('trackerTestApp')

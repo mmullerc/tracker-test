@@ -3,6 +3,7 @@
 (function() {
 angular.module('trackerTestApp')
   .controller('AboutController', AboutController);
+  
   function AboutController(clickService) {
     var vmAbout = this;
     
@@ -10,7 +11,7 @@ angular.module('trackerTestApp')
     vmAbout.section2 = {'id': 2, 'count': 1, 'url':'/about','content':'About this test'};//subtitle
     vmAbout.section3 = {'id': 3, 'count': 1, 'url':'/about','content':'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'};
     vmAbout.section4 = {'id': 4, 'count': 1, 'url':'/about','content':'../assets/images/about.jpg'};//image
-    vmAbout.section5 = {'id': 5, 'count': 1, 'url':'/about','content':'About the other test'}
+    vmAbout.section5 = {'id': 5, 'count': 1, 'url':'/about','content':'About the other test'};
     vmAbout.section6 = {'id': 6, 'count': 1, 'url':'/about','content':'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'};
 
     vmAbout.register = function(psection){
@@ -21,6 +22,7 @@ angular.module('trackerTestApp')
       .error(function(err) {
         console.log(err);
       });
-   }
-}
+    };
+  }
+  
 })();
