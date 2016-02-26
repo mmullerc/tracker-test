@@ -44,6 +44,16 @@ module.exports.create = function (req, res) {
   })
 }
 
+// Get All Tracker in the DB
+module.exports.getAll = function (req, res) {
+
+  Tracker.find().then(function(resp) {
+     res.send(resp);
+   }).catch(function(err){
+     errorHandler(err);
+   })
+}
+
 /*
 function saveUpdates(updates) {
   return function(entity) {
